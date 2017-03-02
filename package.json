@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "jade": "^1.11.0",
+    "strftime": "^0.10.0"
   },
   "devDependencies": {},
   "scripts": {

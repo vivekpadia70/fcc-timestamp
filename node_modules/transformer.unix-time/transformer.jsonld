@@ -1,0 +1,7 @@
+{
+ "@context": "http://transformer.io/context/transformer.jsonld",
+ "type": "type",
+ "id": "unix-time",
+ "description": "UNIX DateTime.",
+ "schema": "string"
+}
