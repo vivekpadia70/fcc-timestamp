@@ -21,17 +21,15 @@ app.get('/', function(req, res, next){
 app.get('/:date', function(req, res){
   var som = req.params.date;
   if(som>=0 && som<=2147452200){
+    som = som*1000;
     var time = strftime('%B %d, %Y', new Date(Number(som)))
-    console.log(time);
+    som = som/1000;
   }
   else if(moment(som.toString(), 'MMMM DD, YYYY')){
     var time = moment(som.toString(), 'MMMM DD, YYYY').valueOf()/1000;
-    tmp = som;
-    som = time;
-    time = tmp;
-    if(!Number(time)){
-      time = null;
-    }
+    tmp = time;
+    time = som;
+    som = tmp;
   }
   else{
     time = null;
